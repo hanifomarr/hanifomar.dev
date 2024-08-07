@@ -3,19 +3,19 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { SiteConfig } from "@/config/site";
+import { siteConfig } from "@/config/site";
 
 const MainNav = () => {
   const pathname = usePathname();
   return (
     <nav className=" flex items-center space-x-4 lg:space-x-6">
       <Link href={"/"} className=" mr-6 flex items-center space-x-2 font-bold">
-        {SiteConfig.name}
+        {siteConfig.name}
       </Link>
       <Link
         href={"/"}
         className={cn(
-          " text-sm font-medium transition-colors hover:text-primary",
+          " text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/" ? " text-foreground" : " text-foreground/60"
         )}
       >
@@ -24,7 +24,7 @@ const MainNav = () => {
       <Link
         href={"/project"}
         className={cn(
-          " text-sm font-medium transition-colors hover:text-primary",
+          " text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/project" ? " text-foreground" : " text-foreground/60"
         )}
       >
@@ -33,7 +33,7 @@ const MainNav = () => {
       <Link
         href={"/about"}
         className={cn(
-          " text-sm font-medium transition-colors hover:text-primary",
+          " text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/about" ? " text-foreground" : " text-foreground/60"
         )}
       >

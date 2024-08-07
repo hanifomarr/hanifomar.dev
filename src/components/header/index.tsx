@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "../ui/button";
 import { Icons } from "../icons";
 import MainNav from "./main-nav";
+import MobileNav from "./mobile-nav";
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
       <div className=" container flex h-14 max-w-screen-2xl items-center">
         <MainNav />
         <div className=" flex flex-1 items-center justify-end space-x-2">
-          <nav className=" flex items-center">
+          <nav className=" hidden sm:inline-block">
             <Link href={"/"}>
               <div
                 className={cn(
@@ -18,7 +19,7 @@ const Header = () => {
                   "w-10 px-0"
                 )}
               >
-                <Icons.github className="h-4 w-4" />
+                <Icons.github className="h-6 w-6" />
               </div>
             </Link>
             <Link href={"/"}>
@@ -28,10 +29,11 @@ const Header = () => {
                   "w-10 px-0"
                 )}
               >
-                <Icons.linkedIn className="h-4 w-4" />
+                <Icons.linkedIn className="h-6 w-6" />
               </div>
             </Link>
           </nav>
+          <MobileNav />
         </div>
       </div>
     </header>
