@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -22,7 +23,16 @@ export default function RootLayout({
           inter.variable
         )}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className=" relative flex flex-col min-h-dvh bg-background">
+            <main className=" flex-1">{children}</main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

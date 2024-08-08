@@ -4,6 +4,7 @@ import { buttonVariants } from "../ui/button";
 import { Icons } from "../icons";
 import MainNav from "./main-nav";
 import MobileNav from "./mobile-nav";
+import ToggleTheme from "./toggle-theme";
 
 const Header = () => {
   return (
@@ -11,12 +12,12 @@ const Header = () => {
       <div className=" container flex h-14 max-w-screen-2xl items-center">
         <MainNav />
         <div className=" flex flex-1 items-center justify-end space-x-2">
-          <nav className=" hidden sm:inline-block">
+          <nav className=" flex items-center gap-2">
             <Link href={"/"}>
               <div
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
-                  "w-10 px-0"
+                  "w-10 px-0 hidden sm:inline-flex"
                 )}
               >
                 <Icons.github className="h-6 w-6" />
@@ -26,14 +27,15 @@ const Header = () => {
               <div
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
-                  "w-10 px-0"
+                  "w-10 px-0 hidden sm:inline-flex"
                 )}
               >
                 <Icons.linkedIn className="h-6 w-6" />
               </div>
             </Link>
+            <ToggleTheme />
+            <MobileNav />
           </nav>
-          <MobileNav />
         </div>
       </div>
     </header>
