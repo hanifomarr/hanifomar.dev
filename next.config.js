@@ -1,13 +1,23 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: [{ loader: "@svgr/webpack", options: { icon: true } }],
-    });
-    return config;
-  },
-};
+module.exports = {
+  // othor next config here...
+  webpack: config => {
+    config.plugins.push(new VeliteWebpackPlugin())
+    return config
+  }
+}
 
-module.exports = nextConfig;
+class VeliteWebpackPlugin {
+  static started = false
+  apply(/** @type {import('webpack').Compiler} */ compiler) {
+    // executed three times in nextjs
+    // twice for the server (nodejs / edge runtime) and once for the client
+    compiler.hooks.beforeCompile.tapPromise('VeliteWebpackPlugin', async () => {
+      if (VeliteWebpackPlugin.started) return
+      VeliteWebpackPlugin.started = true
+      const dev = compiler.options.mode === 'development'
+      const { build } = await import('velite')
+      await build({ watch: dev, clean: !dev })
+    })
+  }
+}

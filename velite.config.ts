@@ -1,0 +1,33 @@
+import { defineCollection, defineConfig, s } from "velite";
+
+const posts = defineCollection({
+  name: "Post",
+  pattern: "blog/**/*.mdx",
+  schema: s
+    .object({
+      slug: s.slug("post"),
+      title: s.string().max(99),
+      description: s.string().max(999).optional(),
+      date: s.isodate(),
+      published: s.boolean().default(true),
+      tags: s.array(s.string()).optional(),
+      body: s.mdx(),
+    })
+    .transform((data) => ({ ...data, permalink: `/blog/${data.slug}` })),
+});
+
+export default defineConfig({
+  root: "content",
+  output: {
+    data: ".velite",
+    assets: "public/static",
+    base: "/static/",
+    name: "[name]-[hash:6].[ext]",
+    clean: true,
+  },
+  collections: { posts },
+  mdx: {
+    rehypePlugins: [],
+    remarkPlugins: [],
+  },
+});
