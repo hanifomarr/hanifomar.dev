@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -30,9 +31,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className=" relative flex flex-col min-h-dvh bg-background">
+          <div className=" relative flex flex-col min-h-screen bg-background">
             <Header />
             <main className=" flex-1">{children}</main>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>
