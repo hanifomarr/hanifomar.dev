@@ -24,7 +24,7 @@ export function PostItem({ slug, title, description, date }: PostItemProps) {
           </dd>
         </dl>
         <Link
-          href={slug}
+          href={"/blog/" + slug}
           className={cn(buttonVariants({ variant: "link" }), "py-0")}
         >
           Read more →
