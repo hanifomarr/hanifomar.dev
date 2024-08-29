@@ -3,8 +3,8 @@ import { formatDate } from "@/lib/utils";
 interface SectionDetail {
   title: string;
   company_name: string;
-  company_location: string;
-  description: string;
+  company_location?: string;
+  description?: string;
   duration?: string;
   start_date?: string;
   end_date?: string;
@@ -35,27 +35,31 @@ export default function Section({
               </div>
               <div className="flex flex-wrap gap-2 gap-y-0 text-lg">
                 <span className="text-neutral-600 dark:text-neutral-400">
-                  {detail.company_name} ·
+                  {detail.company_name}
                 </span>
-                <span className="">{detail.company_location}</span>
+                <span className="">
+                  {detail.company_location && `· ${detail.company_location}`}
+                </span>
               </div>
               <div className="flex flex-wrap gap-2 gap-y-0 text-lg"></div>
-              <div className="space-x-3">
-                <span className="space-x-1">
-                  {formatDate(detail.start_date || "", false)}
-                  <span> - </span>
-                  {detail.end_date ? (
-                    formatDate(detail.end_date, false)
-                  ) : (
-                    <span className="text-green-700 dark:text-green-600">
-                      Now
-                    </span>
-                  )}
-                </span>
-                <span className="text-neutral-600 dark:text-neutral-400">
-                  {detail.duration}
-                </span>
-              </div>
+              {detail.start_date && (
+                <div className="space-x-3">
+                  <span className="space-x-1">
+                    {formatDate(detail.start_date || "", false)}
+                    <span> - </span>
+                    {detail.end_date ? (
+                      formatDate(detail.end_date, false)
+                    ) : (
+                      <span className="text-green-700 dark:text-green-600">
+                        Now
+                      </span>
+                    )}
+                  </span>
+                  <span className="text-neutral-600 dark:text-neutral-400">
+                    {detail.duration}
+                  </span>
+                </div>
+              )}
             </div>
             <div className="text-neutral-600 dark:text-neutral-400">
               {detail.description}

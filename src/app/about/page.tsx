@@ -12,21 +12,19 @@ const datas = [
     section_details: [
       {
         title: "Front End Developer",
-        company_name: "Naaz Premier Sdn Bhd",
+        company_name: "Naaz Premier Sdn. Bhd.",
         company_location: "Sungai Buloh",
         description:
           "Manutenção técnica de hardware e software em computadores e notebooks, formatação e instalação de programas.",
-        time: "1 year 3 months",
         start_date: "6/1/2023",
         end_date: "",
       },
       {
         title: "Web Developer",
-        company_name: "Fastrexs (M) Sdn Bhd ·",
+        company_name: "Fastrexs (M) Sdn. Bhd.",
         company_location: "Cyberjaya",
         description:
           "Manutenção técnica de hardware e software em computadores e notebooks, formatação e instalação de programas.",
-        time: "1 year 5 months",
         start_date: "1/1/2022",
         end_date: "4/1/2023",
       },
@@ -36,11 +34,19 @@ const datas = [
     section_title: "Education",
     section_details: [
       {
-        title: "Front End Developer",
-        company_name: "Naaz Premier Sdn Bhd",
-        company_location: "Sungai Buloh",
-        description:
-          "Manutenção técnica de hardware e software em computadores e notebooks, formatação e instalação de programas.",
+        title:
+          "Bachelor's of Information Technology (Hons.) in Software Engineering",
+        company_name: "Universiti Kuala Lumpur (MIIT)",
+        company_location: "Kuala Lumpur",
+        start_date: "7/1/2017",
+        end_date: "6/1/2021",
+      },
+      {
+        title: "Foundation in Science and Technology (FiST)",
+        company_name: "MARA College Kuala Nerang",
+        company_location: "Kedah",
+        start_date: "7/1/2016",
+        end_date: "7/1/2017",
       },
     ],
   },
@@ -48,18 +54,24 @@ const datas = [
     section_title: "Certificate",
     section_details: [
       {
-        title: "Front End Developer",
-        company_name: "Naaz Premier Sdn Bhd",
-        company_location: "Sungai Buloh",
-        description:
-          "Manutenção técnica de hardware e software em computadores e notebooks, formatação e instalação de programas.",
+        title: "JavaScript: Understanding the Weird Parts",
+        company_name: "Udemy",
       },
       {
-        title: "Web Developer",
-        company_name: "Fastrexs (M) Sdn Bhd ·",
-        company_location: "Cyberjaya",
-        description:
-          "Manutenção técnica de hardware e software em computadores e notebooks, formatação e instalação de programas.",
+        title: "Agile Foundations: Scrum Methodology",
+        company_name: "Skillsoft",
+      },
+      {
+        title: "CI/CD Implementation for DevOps",
+        company_name: "Skillsoft",
+      },
+      {
+        title: "React - The Complete Guide",
+        company_name: "Udemy",
+      },
+      {
+        title: "The Web Developer Bootcamp ",
+        company_name: "Udemy",
       },
     ],
   },
@@ -72,19 +84,47 @@ const skills = [
   },
   {
     icon: <Building />,
-    title: "React",
+    title: "Javascript",
   },
   {
     icon: <Building />,
-    title: "React",
+    title: "Typescript",
+  },
+  {
+    icon: <Building />,
+    title: "Typescript",
+  },
+  {
+    icon: <Building />,
+    title: "Typescript",
+  },
+  {
+    icon: <Building />,
+    title: "Typescript",
   },
 ];
 
 const contacts = [
-  { title: "Github", label: "hanifomarr", link: "github.com" },
-  { title: "LinkedIn", label: "hanifomarr", link: "github.com" },
-  { title: "Behance", label: "hanifomarr", link: "github.com" },
-  { title: "Email", label: "hanifomarr@gmail.com", link: "github.com" },
+  {
+    title: "Github",
+    label: "hanifomarr",
+    link: "https://github.com/hanifomarr",
+  },
+  {
+    title: "LinkedIn",
+    label: "hanifomarr",
+    link: "https://www.linkedin.com/in/hanifomarr/",
+  },
+  {
+    title: "Behance",
+    label: "hanifomarr",
+    link: "https://www.behance.net/hanifomarr",
+  },
+  {
+    title: "Email",
+    label: "hanif.omarr@gmail.com",
+    link: "mailto:hanif.omarr@gmail.com",
+  },
 ];
 
 export default function About() {
@@ -121,13 +161,15 @@ export default function About() {
       <div className="space-y-3">
         <div className=" text-xl font-medium">{"About"}</div>
         <div className="text-neutral-600 dark:text-neutral-400">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eros mi,
-          laoreet sit amet semper nec, dictum lobortis leo. Nunc varius augue
-          convallis ipsum facilisis, a ultricies ex pulvinar. Nunc suscipit,
-          nisi sit amet mattis blandit, lacus dolor convallis magna, non posuere
-          metus ipsum quis metus. Nunc at bibendum est, in facilisis mi. Nullam
-          ac felis tellus. Morbi laoreet in sem sed pulvinar. Maecenas ut magna
-          eget nibh porttitor commodo
+          Passionate Front-End Developer specializing in crafting dynamic and
+          responsive web applications using React, Next.js and Typescript.
+          Strong problem-solving skills, with a focus on creating efficient
+          clean code and improving application load times. Experienced in
+          collaborating with back-end teams to deliver fully integrated
+          solutions. Adept at managing projects from concept to completion in
+          fast-paced environments. Known for translating business requirements
+          into elegant, scalable solutions. Committed to continuous learning and
+          staying up-to-date with the latest web development trends.
         </div>
       </div>
 
