@@ -1,16 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { siteConfig } from "@/config/site";
 
 const MainNav = () => {
   const pathname = usePathname();
   return (
     <nav className=" flex items-center space-x-4 lg:space-x-6">
       <Link href={"/"} className=" mr-6 flex items-center space-x-2 font-bold">
-        {siteConfig.name}
+        <div className="flex items-center hover:scale-110 hover:rotate-6 transition-transform duration-300 ease-in-out">
+          <Image src="/logo.png" alt="logo" width={50} height={50} />
+        </div>
       </Link>
       <Link
         href={"/"}
