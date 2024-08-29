@@ -1,42 +1,82 @@
-import SocialButton from "../components/SocialButton";
-import Navbar from "../components/navbar";
-import Linkedin from "../../public/linkedin.svg";
-import Github from "../../public/github.svg";
-import Behance from "../../public/behance.svg";
-import Email from "../../public/email.svg";
+import { Building } from "lucide-react";
+import Image from "next/image";
+
+// const Card = () => {
+//   return (
+//     <a
+//       className="group relative flex h-full w-full transform-gpu flex-col justify-between gap-5 overflow-hidden rounded-xl text-white transition-all duration-500 will-change-[outline,_transform] group-hover:scale-[.97] hover:scale-[.97] active:scale-100"
+//       href="http://github.com/mateusfg7"
+//       target="_blank"
+//     >
+//       <span
+//         aria-hidden="true"
+//         className="pointer-events-none absolute inset-0 -z-20"
+//       >
+//         <span
+//           aria-hidden="true"
+//           className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 to-neutral-900/20 dark:bg-neutral-900/50"
+//         ></span>
+//       </span>
+//       <span aria-hidden="true" className="px-6 pt-6">
+//         <span className="flex justify-between">
+//           <Building />
+//         </span>
+//       </span>
+//       <span className="space-y-0.5 px-6 pb-6">
+//         <span className="block font-semibold">GitHub</span>
+//         <span className="block text-sm">My experiments (aka projects)</span>
+//       </span>
+//     </a>
+//   );
+// };
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
-      <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 mb-4 h-[80vh] items-center justify-center">
-        <div className="h-[30rem] rounded-3xl p-10 flex flex-col gap-16 bg-gradient-to-r from-rose-100 to-teal-100">
-          <h1 className="text-4xl font-semibold">
-            Hello, I'm a Frontend Developer with focus on react
-          </h1>
-          <p className="flex-1">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-          </p>
-          <div className="flex flex-col lg:flex-row items-center gap-4 justify-self-end">
-            <SocialButton bgColor="github">
-              <Github className="h-5 w-5" />
-            </SocialButton>
-            <SocialButton bgColor="behance">
-              <Behance className="h-5 w-5" />
-            </SocialButton>
-            <SocialButton bgColor="linkedin">
-              <Linkedin className="h-5 w-5" />
-            </SocialButton>
-            <SocialButton bgColor="email">
-              <Email className="h-5 w-5" />
-            </SocialButton>
+    <section className=" container max-w-4xl space-y-11 pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32 ">
+      <div className=" flex flex-col gap-4 text-start">
+        <h1 className="text-3xl sm:text-5xl font-black text-balance">
+          Hi ✌🏻, <br />
+          I&apos;m Hanif and I transforming ideas into beautiful code
+        </h1>
+      </div>
+
+      {/* <div>
+        <div className="mt-8 grid grid-cols-3 gap-3 md:grid-cols-6">
+          <div className="col-span-3">
+            <Card />
+          </div>
+          <div className="col-span-2">
+            <Card />
+          </div>
+          <Card />
+        </div>
+
+        <div className="mt-3 grid grid-cols-3 md:grid-cols-6">
+          <div className="col-span-3 flex flex-col gap-3">
+            <div className="flex gap-3">
+              <div className="w-24">
+                <Card />
+              </div>
+              <div className="flex w-full flex-col gap-3">
+                <Card />
+              </div>
+            </div>
+
+            <div className="cols-span-3">
+              <Card />
+            </div>
+          </div>
+
+          <div className="col-span-3 space-y-3 md:ml-3">
+            <div className="flex gap-3">
+              <Card />
+
+              <Card />
+            </div>
+            <Card />
           </div>
         </div>
-        <div className="hidden sm:block h-[30rem] rounded-3xl bg-[url('/profile.jpeg')] bg-cover bg-center " />
-      </section>
-    </main>
+      </div> */}
+    </section>
   );
 }
