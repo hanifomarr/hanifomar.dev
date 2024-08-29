@@ -134,7 +134,7 @@ export default function About() {
       <div className="flex flex-row gap-8 items-center justify-start">
         <div className="min-w-48 max-w-48">
           <Avatar className=" h-32 w-32">
-            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarImage src="https://avatars.githubusercontent.com/u/57039713?v=4" />
             <AvatarFallback>HO</AvatarFallback>
           </Avatar>
         </div>
