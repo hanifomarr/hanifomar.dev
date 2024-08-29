@@ -1,4 +1,13 @@
-export function Skill({ skills }) {
+interface SkillType {
+  icon: React.ReactNode;
+  title: string;
+}
+
+interface SkillProps {
+  skills: SkillType[];
+}
+
+export const Skill: React.FC<SkillProps> = ({ skills }) => {
   return (
     <div className="space-y-3">
       <div className="text-xl font-medium">Skill</div>
@@ -15,4 +24,4 @@ export function Skill({ skills }) {
       </div>
     </div>
   );
-}
+};
