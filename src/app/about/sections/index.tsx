@@ -15,10 +15,7 @@ interface SectionProps {
   section_details: SectionDetail[];
 }
 
-export default function Section({
-  section_title,
-  section_details,
-}: SectionProps) {
+export const Section = ({ section_title, section_details }: SectionProps) => {
   return (
     <div className="flex flex-col gap-4 md:flex-row md:gap-32 pt-6 first:pt-0">
       <div className="relative">
@@ -69,4 +66,4 @@ export default function Section({
       </div>
     </div>
   );
-}
+};
