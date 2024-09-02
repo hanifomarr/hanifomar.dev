@@ -9,7 +9,7 @@ const MainNav = () => {
   const pathname = usePathname();
   return (
     <nav className=" flex items-center space-x-4 lg:space-x-6">
-      <Link href={"/"} className=" mr-6 flex items-center space-x-2 font-bold">
+      <Link href={"/"}>
         <div className="flex items-center hover:scale-110 hover:rotate-6 transition-transform duration-300 ease-in-out">
           <Image src="/logo.png" alt="logo" width={50} height={50} />
         </div>

@@ -7,6 +7,7 @@ import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
+import Image from "next/image";
 
 interface MobileLinkProps extends LinkProps {
   children: React.ReactNode;
@@ -52,7 +53,8 @@ const MobileNav = () => {
           onOpenChange={setOpen}
           className=" flex items-center font-bold"
         >
-          {siteConfig.name}
+          <Image src="/logo.png" alt="logo" width={50} height={50} />
+          <span>{siteConfig.name}</span>
         </MobileLink>
         <div className=" flex flex-col gap-3 mt-3">
           <MobileLink href={"/"} onOpenChange={setOpen}>
@@ -64,7 +66,7 @@ const MobileNav = () => {
           <MobileLink href={"/about"} onOpenChange={setOpen}>
             About
           </MobileLink>
-          <Link target="_blank" rel="noreferrer" href={siteConfig.links.github}>
+          {/* <Link target="_blank" rel="noreferrer" href={siteConfig.links.github}>
             GitHub
           </Link>
           <Link
@@ -73,7 +75,7 @@ const MobileNav = () => {
             href={siteConfig.links.linkedIn}
           >
             Linked In
-          </Link>
+          </Link> */}
         </div>
       </SheetContent>
     </Sheet>
