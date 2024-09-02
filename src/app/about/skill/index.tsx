@@ -1,5 +1,8 @@
+import { Icons } from "@/components/icons";
+import { createElement, ElementType } from "react";
+
 interface SkillType {
-  icon: React.ReactNode;
+  iconName: keyof typeof Icons;
   title: string;
 }
 
@@ -15,9 +18,13 @@ export const Skill: React.FC<SkillProps> = ({ skills }) => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="relative flex items-center justify-center gap-1 rounded-2xl bg-neutral-900/5 p-4 leading-none data-[is-bad='true']:opacity-50 dark:bg-neutral-300/5"
+            className="relative flex items-center justify-center gap-2 rounded-xl bg-neutral-900/5 py-2 px-4 leading-none  dark:bg-neutral-300/5"
           >
-            <span>{skill.icon}</span>
+            <span>
+              {createElement(Icons[skill.iconName] as ElementType, {
+                className: "h-6 w-6",
+              })}
+            </span>
             <span>{skill.title}</span>
           </div>
         ))}
