@@ -42,9 +42,11 @@ const Blog = ({ searchParams }: BlogProps) => {
           })}
         </ul>
       ) : (
-        <p>No Post</p>
+        <p className=" text-center  text-lg text-muted-foreground p-10">
+          No Posts Available
+        </p>
       )}
-      <QueryPagination totalPage={totalPage} />
+      <QueryPagination totalPage={totalPage} className="mt-4" />
     </div>
   );
 };
