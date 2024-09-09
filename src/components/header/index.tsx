@@ -8,12 +8,12 @@ import ToggleTheme from "./toggle-theme";
 
 const Header = () => {
   return (
-    <header className="z-10 sticky top-0 w-full border-b border-border bg-background">
-      <div className=" container flex h-14 max-w-screen-2xl items-center">
+    <header className=" z-10 sticky top-0 w-full p-3">
+      <div className=" container max-w-4xl flex h-14  items-center rounded-xl border border-border bg-background p-2 backdrop-blur-3xl transition-all ">
         <MainNav />
         <div className=" flex flex-1 items-center justify-end space-x-2">
           <nav className=" flex items-center gap-2">
-            <Link href={"/"}>
+            {/* <Link href={"/"}>
               <div
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
@@ -32,7 +32,7 @@ const Header = () => {
               >
                 <Icons.linkedIn className="h-6 w-6" />
               </div>
-            </Link>
+            </Link> */}
             <ToggleTheme />
             <MobileNav />
           </nav>

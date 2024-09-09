@@ -13,7 +13,9 @@ interface PostItemProps {
 export function PostItem({ slug, title, description, date }: PostItemProps) {
   return (
     <article className=" flex flex-col gap-2 border-border border-b py-3">
-      <h2 className=" font-bold text-2xl">{title}</h2>
+      <Link href={"/blog/" + slug} className=" hover:underline">
+        <h2 className=" font-bold text-2xl">{title}</h2>
+      </Link>
       <p className=" max-w-none text-muted-foreground">{description}</p>
       <div className=" flex items-center justify-between">
         <dl>
