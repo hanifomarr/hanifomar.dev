@@ -10,9 +10,14 @@ export default function Home() {
           I&apos;m Hanif and I transform ideas into beautiful code
         </h1>
       </div>
-      <Link href="blog">
-        <Button>See Project →</Button>
-      </Link>
+      <div className=" flex gap-3">
+        <Link href="blog">
+          <Button>See Project →</Button>
+        </Link>
+        <Link href="about">
+          <Button variant="outline">About Me</Button>
+        </Link>
+      </div>
     </section>
   );
 }
