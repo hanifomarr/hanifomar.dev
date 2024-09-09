@@ -1,0 +1,115 @@
+---
+title: In-House Sales Management Mobile App
+description: Developing a cross-platform mobile application for Naaz Premier's in-house sales management system.
+slug: in-house-sale-management-app
+date: 2023-10-08
+published: true
+---
+
+## Overview
+
+As part of my role at Naaz Premier, I contributed to the development of a mobile application that integrated with the in-house sales management system via REST APIs. The project spanned about four months from initial planning to deployment.
+
+This cross-platform mobile app was designed to streamline sales operations and offer real-time access to sales data, allowing the team to manage sales efficiently on the go. I worked closely with the UI/UX designer and back-end developer to ensure seamless integration and a smooth user experience.
+
+## Objective
+
+The main goal of this project was to create a mobile application that could:
+
+- **Integrate** with the existing sales management system via REST APIs.
+- Provide a **cross-platform** experience (iOS and Android).
+- Include features for **creating, editing, and viewing sales**.
+- Enhance the **UI/UX** with modern, responsive design principles.
+- Provide an **education module** for in-house training, including video playback.
+- Use **real-time data synchronization** for seamless updates of sales information.
+
+## Key Challenges
+
+- **API Integration**: Ensuring efficient communication with the back-end sales system.
+- **State Management**: Handling complex states across the app, including authentication and sales processes.
+- **Cross-Platform Compatibility**: Maintaining performance and usability across both iOS and Android platforms.
+- **Form Handling & Validation**: Implementing user-friendly forms with validation.
+- **Video Playback**: Developing the education module to stream training videos.
+
+## Approach
+
+1. **Cross-Platform Development with React Native**:
+
+   - Utilized React Native for rapid development across iOS and Android, leveraging **Expo** for quick iteration and testing.
+   - Integrated the app with the existing sales system through **REST API** calls for smooth data retrieval and management.
+   - Developed **reusable UI components** such as buttons and inputs for consistency and reusability across the app.
+
+2. **State Management with Redux Toolkit**:
+
+   - Used **Redux Toolkit** for managing the app's global state, particularly for handling authentication (token storage), creating sales, and fetching real-time sales data.
+   - Implemented middleware for smooth async logic, such as handling API requests for sales creation.
+
+   ```js
+   const store = configureStore({
+     reducer: {
+       auth: authSlice.reducer,
+       sale: saleSlice.reducer,
+       education: educationSlice.reducer,
+     },
+   });
+   ```
+
+3. **Form Handling with Formik and Yup**:
+
+   - Used **Formik** for form handling, providing users with a responsive and user-friendly experience for creating and editing sales.
+   - Incorporated **Yup** for schema-based form validation, ensuring input validation was robust and intuitive.
+
+   ```js
+   export const saleDetailSchema = Yup.object().shape({
+     selectedDate: Yup.date().required("Required"),
+     selectedsource: Yup.string().required("Required"),
+     selectedpaymentmethod: Yup.string().required("Required"),
+   });
+   ```
+
+4. **UI Development with Custom Components**:
+
+   - Designed and implemented custom, reusable UI components like buttons, inputs, and navigation elements to maintain a cohesive design and optimize reusability.
+   - Collaborated with the UI/UX team to ensure the app was user-friendly, modern, and intuitive for the sales team.
+
+   ```js
+   const CustomButton = ({ title, onPress, buttonStyle, buttonTextStyle }) => {
+     return (
+       <TouchableOpacity style={[styles.button, buttonStyle]} onPress={onPress}>
+         <Text style={[styles.buttonText, buttonTextStyle]}>{title}</Text>
+       </TouchableOpacity>
+     );
+   };
+   ```
+
+5. **Education Module with Video Playback**:
+
+   - Developed a dedicated module where users could view training videos. This was integrated as part of an **knowledge base** for internal team training.
+   - Implemented a video player using React Native libraries to stream the content seamlessly.
+
+6. **Navigation with React Navigation**:
+
+   - Used **React Navigation** to manage app screens and ensure smooth transitions between creating, viewing, and editing sales, as well as accessing the education module.
+
+7. **Testing and Deployment**:
+
+   - Conducted rigorous cross-platform testing to ensure consistent performance and smooth user experience on both Android and iOS devices.
+   - Deployed the app using **Expo’s build and deployment pipeline**, enabling easy distribution and updates.
+
+## Features Developed
+
+- **Create, Edit, View Sales**: Users can manage sales data, with features to add, update, and view sales details.
+- **Education Module**: A video player that streams educational content for internal training.
+- **Reusable UI Components**: Buttons, inputs, and other components to ensure a clean, consistent design across the app.
+- **Form Handling & Validation**: Seamless form experience with robust validation using Formik and Yup.
+- **Authentication**: Secure login with token management using Redux Toolkit.
+
+## Results
+
+- **Successful Cross-Platform Launch**: Delivered a fully functional mobile app for iOS and Android within 4 months.
+- **Improved Sales Efficiency**: Sales teams were able to manage and track sales efficiently, leading to a 20% increase in productivity.
+- **Positive User Feedback**: The app was praised for its ease of use, modern UI, and the seamless integration of training videos.
+
+## Conclusion
+
+This project was a critical success in improving the sales management workflow at Naaz Premier. By utilizing **React Native**, **Expo**, and custom reusable components, we created a robust, real-time mobile application that integrates with the company’s existing sales system. The collaboration between the front-end, back-end, and UI/UX teams was key to delivering a well-rounded, user-friendly solution within the project timeline.
