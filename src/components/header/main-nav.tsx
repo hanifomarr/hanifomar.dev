@@ -30,7 +30,7 @@ const MainNav = () => {
           pathname === "/blog" ? " text-foreground" : " text-foreground/60"
         )}
       >
-        Project
+        Blog
       </Link>
       <Link
         href={"/about"}

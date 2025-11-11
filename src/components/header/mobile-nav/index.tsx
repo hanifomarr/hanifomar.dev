@@ -61,7 +61,7 @@ const MobileNav = () => {
             Home
           </MobileLink>
           <MobileLink href={"/blog"} onOpenChange={setOpen}>
-            Project
+            Blog
           </MobileLink>
           <MobileLink href={"/about"} onOpenChange={setOpen}>
             About

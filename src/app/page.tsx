@@ -12,7 +12,7 @@ export default function Home() {
       </div>
       <div className=" flex gap-3">
         <Link href="blog">
-          <Button>See Project →</Button>
+          <Button>See Blog →</Button>
         </Link>
         <Link href="about">
           <Button variant="outline">About Me</Button>

@@ -25,9 +25,12 @@ const Blog = ({ searchParams }: BlogProps) => {
       <div className=" flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className=" flex-1 space-y-4">
           <h1 className=" inline-block font-black text-4xl lg:text-5xl">
-            Project
+            Blog
           </h1>
-          <p className=" text-xl text-muted-foreground">description</p>
+          <p className=" text-xl text-muted-foreground">
+            Sharing what I learn about coding, design, and building great
+            products.
+          </p>
         </div>
       </div>
       <hr className=" mt-8" />

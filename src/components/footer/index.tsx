@@ -32,23 +32,7 @@ export function Footer() {
           </Link>
         </div>
         <div className="text-center text-sm text-muted-foreground md:text-right">
-          Built with{" "}
-          <Link href="https://nextjs.org" rel="external" target="_blank">
-            Next.js
-          </Link>
-          ,{" "}
-          <Link href="https://mdxjs.com" rel="external" target="_blank">
-            MDX
-          </Link>
-          ,{" "}
-          <Link href="https://tailwindcss.com" rel="external" target="_blank">
-            Tailwindcss
-          </Link>{" "}
-          and{" "}
-          <Link href="https://velite.js.org" rel="external" target="_blank">
-            Velite
-          </Link>{" "}
-          by{" "}
+          Built by{" "}
           <Link
             href="https://github.com/hanifomarr"
             rel="external"
